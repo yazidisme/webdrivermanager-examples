@@ -10,6 +10,9 @@
 
 This repository contains JUnit examples to automate the [Selenium Webdriver] binaries management using [WebDriverManager]. These examples are open source, released under the terms of [Apache 2.0 License].
 
+**WebDriverManager-Examples** is being sponsored by the following tool; please help to support us by taking a look and signing up to a free trial:<br>
+<a href="https://tracking.gitads.io/?repo=webdrivermanager-examples"><img src="https://images.gitads.io/webdrivermanager-examples" alt="GitAds"/></a>
+
 ## Usage
 
 In order to use WebDriverManager from tests in a Maven project, you need to add the following dependency in your `pom.xml` (Java 8 or upper required):
@@ -18,7 +21,7 @@ In order to use WebDriverManager from tests in a Maven project, you need to add 
 <dependency>
     <groupId>io.github.bonigarcia</groupId>
     <artifactId>webdrivermanager</artifactId>
-    <version>3.7.1</version>
+    <version>4.1.0</version>
     <scope>test</scope>
 </dependency>
 ```
@@ -27,7 +30,7 @@ In order to use WebDriverManager from tests in a Maven project, you need to add 
 
 ```
 dependencies {
-    testCompile("io.github.bonigarcia:webdrivermanager:3.7.1")
+    testCompile("io.github.bonigarcia:webdrivermanager:4.1.0")
 }
 ```
 
@@ -116,7 +119,7 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 
 ## About
 
-WebDriverManager-Examples (Copyright &copy; 2016-2019) is a personal project of [Boni Garcia] licensed under [Apache 2.0 License]. Comments, questions and suggestions are always very [welcome][WebDriverManager-Examples issues]!
+WebDriverManager-Examples (Copyright &copy; 2016-2020) is a personal project of [Boni Garcia] licensed under [Apache 2.0 License]. Comments, questions and suggestions are always very [welcome][WebDriverManager-Examples issues]!
 
 [Apache 2.0 License]: http://www.apache.org/licenses/LICENSE-2.0
 [Boni Garcia]: http://bonigarcia.github.io/

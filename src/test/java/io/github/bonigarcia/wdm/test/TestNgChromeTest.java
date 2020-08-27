@@ -16,9 +16,12 @@
  */
 package io.github.bonigarcia.wdm.test;
 
+import static java.lang.invoke.MethodHandles.lookup;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.assertThat;
+import static org.slf4j.LoggerFactory.getLogger;
 
+import org.slf4j.Logger;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -32,13 +35,19 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  */
 public class TestNgChromeTest {
 
+    static final Logger log = getLogger(lookup().lookupClass());
+
     @BeforeTest(alwaysRun = true)
     public void beforeTest() {
-        WebDriverManager.chromedriver().setup();
+        log.debug("TestNgChromeTest @BeforeTest");
+        WebDriverManager.chromedriver().config().setAvoidAutoReset(true);
+        WebDriverManager.chromedriver().clearResolutionCache().forceDownload()
+                .setup();
     }
 
     @Test
     public void testChrome() {
+        log.debug("TestNgChromeTest @Test");
         assertThat(System.getProperty("webdriver.chrome.driver"),
                 containsString("chromedriver"));
     }
